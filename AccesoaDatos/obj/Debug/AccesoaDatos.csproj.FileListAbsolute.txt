@@ -1,0 +1,11 @@
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\bin\Debug\AccesoaDatos.exe.config
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\bin\Debug\AccesoaDatos.exe
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\bin\Debug\AccesoaDatos.pdb
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.AssemblyReference.cache
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.SuggestedBindingRedirects.cache
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.frmIngreso.resources
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.Properties.Resources.resources
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.GenerateResource.cache
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.CoreCompileInputs.cache
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.exe
+C:\Users\operador\source\repos\AccesoaDatos\AccesoaDatos\obj\Debug\AccesoaDatos.pdb
