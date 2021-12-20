@@ -37,10 +37,10 @@
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -123,14 +123,6 @@
             this.txtNombres.Size = new System.Drawing.Size(284, 20);
             this.txtNombres.TabIndex = 8;
             // 
-            // txtFechaNac
-            // 
-            this.txtFechaNac.Location = new System.Drawing.Point(279, 239);
-            this.txtFechaNac.MaxLength = 10;
-            this.txtFechaNac.Name = "txtFechaNac";
-            this.txtFechaNac.Size = new System.Drawing.Size(284, 20);
-            this.txtFechaNac.TabIndex = 9;
-            // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(279, 285);
@@ -157,16 +149,29 @@
             this.btnNuevo.TabIndex = 12;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtpFechaNacimiento.CustomFormat = "yyyy-MM-dd";
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(279, 240);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(282, 20);
+            this.dtpFechaNacimiento.TabIndex = 13;
+            this.dtpFechaNacimiento.Value = new System.DateTime(2021, 12, 20, 0, 0, 0, 0);
+            this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 450);
+            this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtPeso);
-            this.Controls.Add(this.txtFechaNac);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtCedula);
@@ -178,6 +183,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmIngreso";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmIngreso_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,10 +200,10 @@
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.TextBox txtFechaNac;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
     }
 }
 

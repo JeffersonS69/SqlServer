@@ -25,34 +25,53 @@ namespace AccesoaDatos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //1. Crear la conexión
-            // SqlConnection conexion = new SqlConnection(@"server = //; database = //; user id= //; password= //");
-            SqlConnection conexion = new SqlConnection(@"server=L-ELR-001\SQLEXPRESS; database =TI2021; Intregrated Security=true");
+            try
+            {
+                //1. conectar a la base de datos
+                SqlConnection conexion = new SqlConnection("server=JEFF\\SQLEXPRESS; database=TI2021; Integrated Security=true");
+                //2. definir operacion
+                string sql = "insert into personas(Cedula, Apellidos, Nombres, FechaNacimiento, Peso) ";
+                sql += "values (@Cedula, @Apellidos, @Nombres, @FechaNacimiento, @Peso)";
+                // 3. ejecutar operacion
+                SqlCommand comando = new SqlCommand(sql, conexion);
+                //3.1. configurar los parámetros -> @Cedula, @Apellidos, @Nombres, @Nacimiento, @Peso
+                comando.Parameters.Add(new SqlParameter("@Cedula", this.txtCedula.Text));
+                comando.Parameters.Add(new SqlParameter("@Apellidos", this.txtApellidos.Text));
+                comando.Parameters.Add(new SqlParameter("@Nombres", this.txtNombres.Text));
+                comando.Parameters.Add(new SqlParameter("@FechaNacimiento", this.dtpFechaNacimiento.Value));
+                comando.Parameters.Add(new SqlParameter("@Peso", this.txtPeso.Text));
+                //3.2 Abrir conexión
+                conexion.Open();
+                //3.3 ejecutar el comando e insertar el registro en la base de datos
+                int res = comando.ExecuteNonQuery();
+                //4. Cerrar la conexión
+                conexion.Close();
+                MessageBox.Show("Filas insertadas: " + res.ToString());
+            }catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
-            //2. Definir una operación
-            string sql = "insert into personas(cedula, apellidos, nombres, fechaNacimiento, peso)";
-            sql += "values (@cedula, @apellidos, @nombres, @fechaNacimiento, @peso)";
+        }
 
-            //3. Ejecutar la operación
-            SqlCommand comando = new SqlCommand(sql, conexion);
+        private void frmIngreso_Load(object sender, EventArgs e)
+        {
 
-            //3.1 Configurar los parámetros: @cedula, @apellidos, @nombres, @fechaNacimiento, @peso
-            comando.Parameters.Add(new SqlParameter("@cedula", this.txtCedula.Text));
-            comando.Parameters.Add(new SqlParameter("@apellidos", this.txtApellidos.Text));
-            comando.Parameters.Add(new SqlParameter("@nombres", this.txtNombres.Text));
-            comando.Parameters.Add(new SqlParameter("@fechaNacimiento", this.txtFechaNac.Text));
-            comando.Parameters.Add(new SqlParameter("@peso", this.txtPeso.Text));
+        }
 
-            //3.2 Abir conexión
-            conexion.Open();
-            //3.3 insertar el registro en la BDD
-            int res = comando.ExecuteNonQuery();
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
-            //4. Cerrar conexión
-            conexion.Close();
+        }
 
-            MessageBox.Show("Filas insertadas: " + res.ToString());
-
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.txtCedula.Clear();
+            this.txtApellidos.Clear();
+            this.txtNombres.Clear();
+            this.txtPeso.Clear();
+           
         }
     }
 }
