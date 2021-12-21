@@ -28,7 +28,7 @@ namespace AccesoaDatos
             try
             {
                 //1. conectar a la base de datos
-                SqlConnection conexion = new SqlConnection("server=JEFF\\SQLEXPRESS; database=TI2021; Integrated Security=true");
+                SqlConnection conexion = new SqlConnection("server=L-ELR-001\\SQLEXPRESS; database=TI2021; Integrated Security=true");
                 //2. definir operacion
                 string sql = "insert into personas(Cedula, Apellidos, Nombres, FechaNacimiento, Peso) ";
                 sql += "values (@Cedula, @Apellidos, @Nombres, @FechaNacimiento, @Peso)";
@@ -47,9 +47,15 @@ namespace AccesoaDatos
                 //4. Cerrar la conexión
                 conexion.Close();
                 MessageBox.Show("Filas insertadas: " + res.ToString());
-            }catch (SqlException ex)
+            }
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
             }
             
 

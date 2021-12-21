@@ -154,7 +154,7 @@
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dtpFechaNacimiento.CustomFormat = "yyyy-MM-dd";
+            this.dtpFechaNacimiento.CustomFormat = "yyyy/MM/dd";
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(279, 240);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";

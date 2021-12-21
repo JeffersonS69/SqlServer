@@ -20,3 +20,16 @@ C:\Users\ibarr\source\repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.csproj
 C:\Users\ibarr\source\repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.CoreCompileInputs.cache
 C:\Users\ibarr\source\repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.exe
 C:\Users\ibarr\source\repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.pdb
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.AssemblyReference.cache
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.SuggestedBindingRedirects.cache
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmIngreso.resources
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.Properties.Resources.resources
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.GenerateResource.cache
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.csproj.CoreCompileInputs.cache
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.exe
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.pdb
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\bin\Debug\AccesoaDatos.exe.config
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\bin\Debug\AccesoaDatos.exe
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\bin\Debug\AccesoaDatos.pdb
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmBuscar.resources
+C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmEliminar.resources
