@@ -41,13 +41,14 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 35);
+            this.label1.Location = new System.Drawing.Point(41, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 20);
             this.label1.TabIndex = 0;
@@ -133,7 +134,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(182, 353);
+            this.btnGuardar.Location = new System.Drawing.Point(85, 353);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(132, 56);
             this.btnGuardar.TabIndex = 11;
@@ -143,11 +144,11 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(373, 353);
+            this.btnNuevo.Location = new System.Drawing.Point(264, 353);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(132, 56);
             this.btnNuevo.TabIndex = 12;
-            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Text = "Limpiar";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -163,11 +164,24 @@
             this.dtpFechaNacimiento.Value = new System.DateTime(2021, 12, 20, 0, 0, 0, 0);
             this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(435, 353);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 56);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Volver al menu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnGuardar);
@@ -204,6 +218,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.Button button1;
     }
 }
 

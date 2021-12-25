@@ -79,5 +79,12 @@ namespace AccesoaDatos
             this.txtPeso.Clear();
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form menu = new frmMenu();
+            menu.Show();
+            this.Hide();
+        }
     }
 }

@@ -42,7 +42,7 @@ namespace AccesoaDatos
         }
         private DataTable getPersonas(string cedula = "")
         {
-            SqlConnection conexion = new SqlConnection("server=L-ELR-001\\SQLEXPRESS; database=TI2021; Integrated Security=true");
+            SqlConnection conexion = new SqlConnection("server=JEFF\\SQLEXPRESS; database=TI2021; Integrated Security=true");
 
             string sql = "";
             if (cedula == "")//si no hay cédula
@@ -100,6 +100,13 @@ namespace AccesoaDatos
 
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form menu = new frmMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

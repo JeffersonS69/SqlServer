@@ -1,6 +1,6 @@
 ﻿namespace AccesoaDatos
 {
-    partial class frmEliminar
+    partial class frmActualizar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -42,23 +42,35 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPersona = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnEliminar
+            // button2
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(562, 71);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 32);
-            this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(675, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 32);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Volver al menu";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(579, 46);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(86, 32);
+            this.btnActualizar.TabIndex = 20;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtFechaNac);
+            this.groupBox1.Controls.Add(this.dtpFechaNacimiento);
             this.groupBox1.Controls.Add(this.txtPeso);
             this.groupBox1.Controls.Add(this.txtNombres);
             this.groupBox1.Controls.Add(this.txtApellidos);
@@ -68,28 +80,18 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(31, 124);
+            this.groupBox1.Location = new System.Drawing.Point(26, 99);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(738, 255);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Prsona";
-            // 
-            // txtFechaNac
-            // 
-            this.txtFechaNac.Location = new System.Drawing.Point(333, 171);
-            this.txtFechaNac.MaxLength = 30;
-            this.txtFechaNac.Name = "txtFechaNac";
-            this.txtFechaNac.ReadOnly = true;
-            this.txtFechaNac.Size = new System.Drawing.Size(284, 20);
-            this.txtFechaNac.TabIndex = 25;
             // 
             // txtPeso
             // 
             this.txtPeso.Location = new System.Drawing.Point(333, 213);
             this.txtPeso.MaxLength = 10;
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.ReadOnly = true;
             this.txtPeso.Size = new System.Drawing.Size(284, 20);
             this.txtPeso.TabIndex = 22;
             // 
@@ -98,7 +100,6 @@
             this.txtNombres.Location = new System.Drawing.Point(333, 119);
             this.txtNombres.MaxLength = 30;
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.ReadOnly = true;
             this.txtNombres.Size = new System.Drawing.Size(284, 20);
             this.txtNombres.TabIndex = 21;
             // 
@@ -107,7 +108,6 @@
             this.txtApellidos.Location = new System.Drawing.Point(333, 66);
             this.txtApellidos.MaxLength = 30;
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.ReadOnly = true;
             this.txtApellidos.Size = new System.Drawing.Size(284, 20);
             this.txtApellidos.TabIndex = 20;
             // 
@@ -116,7 +116,6 @@
             this.txtCedula.Location = new System.Drawing.Point(333, 19);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.ReadOnly = true;
             this.txtCedula.Size = new System.Drawing.Size(284, 20);
             this.txtCedula.TabIndex = 19;
             // 
@@ -170,46 +169,45 @@
             this.cmbPersona.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbPersona.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbPersona.FormattingEnabled = true;
-            this.cmbPersona.Location = new System.Drawing.Point(182, 78);
+            this.cmbPersona.Location = new System.Drawing.Point(196, 53);
             this.cmbPersona.Name = "cmbPersona";
             this.cmbPersona.Size = new System.Drawing.Size(364, 21);
-            this.cmbPersona.TabIndex = 5;
+            this.cmbPersona.TabIndex = 18;
             this.cmbPersona.SelectedIndexChanged += new System.EventHandler(this.cmbPersona_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 81);
+            this.label1.Location = new System.Drawing.Point(78, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 13);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 17;
             this.label1.Text = "Seleccione la persona";
             // 
-            // button1
+            // dtpFechaNacimiento
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(669, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 32);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Volver al menu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dtpFechaNacimiento.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtpFechaNacimiento.CustomFormat = "yyyy/MM/dd";
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(333, 168);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(282, 20);
+            this.dtpFechaNacimiento.TabIndex = 23;
+            this.dtpFechaNacimiento.Value = new System.DateTime(2021, 12, 25, 0, 0, 0, 0);
             // 
-            // frmEliminar
+            // frmActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 402);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnEliminar);
+            this.ClientSize = new System.Drawing.Size(800, 395);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmbPersona);
             this.Controls.Add(this.label1);
-            this.Name = "frmEliminar";
-            this.Text = "frmEliminar";
-            this.Load += new System.EventHandler(this.frmEliminar_Load);
+            this.Name = "frmActualizar";
+            this.Text = "frmActualizar";
+            this.Load += new System.EventHandler(this.frmActualizar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -219,9 +217,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtFechaNac;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.TextBox txtApellidos;
@@ -233,6 +231,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbPersona;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
     }
 }

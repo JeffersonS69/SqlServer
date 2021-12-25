@@ -33,3 +33,7 @@ C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\bin\Debug\AccesoaDatos.exe
 C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\bin\Debug\AccesoaDatos.pdb
 C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmBuscar.resources
 C:\Users\operador\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmEliminar.resources
+C:\Users\ibarr\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmBuscar.resources
+C:\Users\ibarr\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmEliminar.resources
+C:\Users\ibarr\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmMenu.resources
+C:\Users\ibarr\Source\Repos\SqlServer\AccesoaDatos\obj\Debug\AccesoaDatos.frmActualizar.resources
