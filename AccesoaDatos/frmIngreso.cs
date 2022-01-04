@@ -27,26 +27,14 @@ namespace AccesoaDatos
         {
             try
             {
-                //1. conectar a la base de datos
-                SqlConnection conexion = new SqlConnection("server=L-ELR-001\\SQLEXPRESS; database=TI2021; Integrated Security=true");
-                //2. definir operacion
-                string sql = "insert into personas(Cedula, Apellidos, Nombres, FechaNacimiento, Peso) ";
-                sql += "values (@Cedula, @Apellidos, @Nombres, @FechaNacimiento, @Peso)";
-                // 3. ejecutar operacion
-                SqlCommand comando = new SqlCommand(sql, conexion);
-                //3.1. configurar los parámetros -> @Cedula, @Apellidos, @Nombres, @Nacimiento, @Peso
-                comando.Parameters.Add(new SqlParameter("@Cedula", this.txtCedula.Text));
-                comando.Parameters.Add(new SqlParameter("@Apellidos", this.txtApellidos.Text));
-                comando.Parameters.Add(new SqlParameter("@Nombres", this.txtNombres.Text));
-                comando.Parameters.Add(new SqlParameter("@FechaNacimiento", this.dtpFechaNacimiento.Value));
-                comando.Parameters.Add(new SqlParameter("@Peso", this.txtPeso.Text));
-                //3.2 Abrir conexión
-                conexion.Open();
-                //3.3 ejecutar el comando e insertar el registro en la base de datos
-                int res = comando.ExecuteNonQuery();
-                //4. Cerrar la conexión
-                conexion.Close();
-                MessageBox.Show("Filas insertadas: " + res.ToString());
+                int res = Clases.Personas.insertar(this.txtCedula.Text, this.txtApellidos.Text, this.txtNombres.Text, Convert.ToDateTime(this.dtpFechaNacimiento.Value.ToString()), Convert.ToDouble(this.txtPeso.Text));
+                //MessageBox.Show("Filas insertadas: " + res.ToString());
+                if (res > 0)
+                {
+                    MessageBox.Show("Registro guardado con éxito...");
+                }
+                else
+                    MessageBox.Show("No se puedo guardar el registro...");
             }
             catch (SqlException ex)
             {

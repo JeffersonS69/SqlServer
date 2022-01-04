@@ -138,5 +138,12 @@ namespace AccesoaDatos
             this.Hide();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frmGetPersonas = new frmGetPersonas();
+            frmGetPersonas.Show();
+            this.Hide();
+        }
     }
 }
