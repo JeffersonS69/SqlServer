@@ -43,6 +43,20 @@ namespace AccesoaDatos.Clases
 
             return res;
         }
+        
+        public static DataTable seleccionar(string cedula)
+        {
+            SqlConnection conexion = new SqlConnection (cadenacon);
+            string sql = "Select cedula, apellidos, nombres, fechaNacimiento, peso ";
+            sql += "from personas where cedula=@cedula";
+            SqlCommand comando = new SqlCommand(sql, conexion);
+            comando.Parameters.Add(new SqlParameter("@Cedula", cedula));
+            SqlDataAdapter ad1 = new SqlDataAdapter(comando);
+            DataTable dt = new DataTable();
+            ad1.Fill(dt);
+            return dt;
+
+        }
         public static DataTable getPersonas()
         {
             SqlConnection conexion = new SqlConnection(cadenacon);
@@ -61,5 +75,9 @@ namespace AccesoaDatos.Clases
 
             return dt;
         }
+
+
+      
+
     }
 }
